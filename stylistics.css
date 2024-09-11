@@ -1,0 +1,109 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #f5f5dc;
+    display: grid;
+    align-content: center;
+/* background-color: #010127; use this as background color and make game-area a different or lighter shade of the b.g.*/
+}
+
+
+p{
+    margin: 0;
+}
+
+h1,h2,h3,h4{
+    margin: 0;
+}
+
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+button{
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+}
+
+
+.game-board{
+    text-align: -webkit-center;
+}
+
+
+.card-container{
+    background-color: #DC143C;
+    display: grid;
+    max-width: 450px;
+    padding: 1rem .75rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: .5rem;
+    column-gap: .75rem;
+}
+
+
+.card{
+ /* typical card style
+    height: 110px; 
+    max-width: 90px;
+ */   
+
+/* Tablet display
+    max-height: 250px;
+    max-width: 250px;
+
+
+    max-height: 125px;
+    max-width: 125px;
+*/
+
+    aspect-ratio: 1 / 1; 
+   
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: ease 500ms;
+  
+}
+
+.card:active{
+    transform: scale(.97);
+    transition: ease 500ms;
+}
+
+
+.card-flip{
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front{
+    background-color: #aca894;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 30px;
+    display: grid;
+    align-items: center;
+
+}
+
+.card-back{
+    background-color: #010127;
+}
+
+
+/*background-color: #000035; for card-back color*/
